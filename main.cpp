@@ -1,4 +1,3 @@
-
 #include "hashTable.hpp"
 
 int main(void) {
