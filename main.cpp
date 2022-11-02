@@ -6,7 +6,7 @@ int main(void) {
 
     std::cin >> userInput;
     
-    hashTable myTable = hashTable(10);
+    hashTable myTable = hashTable(50);
     myTable.insert(userInput);
     myTable.printTable();
 
