@@ -1,4 +1,5 @@
 #include "hashTable.hpp"
+
 // default constructor for hash table
 hashTable::hashTable() {
     tableSize = 10;
