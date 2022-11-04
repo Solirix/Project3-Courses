@@ -1,5 +1,4 @@
 #include "hashTable.hpp"
-#include "courseStruct.hpp"
 
 std::string readData(std::string);
 

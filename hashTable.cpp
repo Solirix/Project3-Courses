@@ -1,5 +1,5 @@
 #include "hashTable.hpp"
-#include "courseStruct.hpp"
+
 
 // default constructor for hash table
 hashTable::hashTable() {
