@@ -3,7 +3,6 @@
 #include <vector>
 #include <cmath>
 #include <fstream>
-#include "courseStruct.hpp"
 
 class hashTable {
     private:
