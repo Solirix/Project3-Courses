@@ -2,6 +2,7 @@
 #include <iostream>
 #include <vector>
 #include <cmath>
+#include <fstream>
 
 class hashTable {
     private:
@@ -12,6 +13,6 @@ class hashTable {
         hashTable(int);
         hashTable();
         int hash(int);
-        void insert(int);
+        void insert(Ht_item);
         void printTable();
 };

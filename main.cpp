@@ -1,13 +1,17 @@
 #include "hashTable.hpp"
+#include "courseStruct.hpp"
 
 int main(void) {
-    int userInput = 0;
+    struct Ht_item courseInput;
 
-    std::cin >> userInput;
+    std::string fileInput = "course";
+
     
     hashTable myTable = hashTable(50);
-    myTable.insert(userInput);
+    myTable.insert(courseInput);
     myTable.printTable();
 
     return 0;
 }
+
+//create a hash table using an array with mid-square hashing
