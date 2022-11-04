@@ -1,11 +1,13 @@
 #include "hashTable.hpp"
 #include "courseStruct.hpp"
 
+std::string readData(std::string);
+
 int main(void) {
     struct Ht_item courseInput;
+    
 
-    std::string fileInput = "course";
-
+    
     
     hashTable myTable = hashTable(50);
     myTable.insert(courseInput);
@@ -14,4 +16,15 @@ int main(void) {
     return 0;
 }
 
-//create a hash table using an array with mid-square hashing
+std::string readData(std::string fileInput) {
+    std::ifstream myFile;
+    std::string fileData;
+
+    myFile.open(fileInput);
+
+    while (myFile.eof() == false) {
+        myFile >> fileData;
+    }
+
+    return fileData;
+}
