@@ -1,11 +1,12 @@
 #include "hashTable.hpp"
 
-std::string readData(std::string);
+//       std::string readData(std::string);
 
 int main(void) {
     struct Ht_item courseInput;
     
-
+    courseInput.courseNumber = 123;
+    courseInput.courseName = "C++";
     
     
     hashTable myTable = hashTable(50);
@@ -15,15 +16,15 @@ int main(void) {
     return 0;
 }
 
-std::string readData(std::string fileInput) {
-    std::ifstream myFile;
-    std::string fileData;
+//       std::string readData(std::string fileInput) {
+//           std::ifstream myFile;
+//           std::string fileData;
 
-    myFile.open(fileInput);
+//           myFile.open(fileInput);
 
-    while (myFile.eof() == false) {
-        myFile >> fileData;
-    }
+//           while (myFile.eof() == false) {
+//               myFile >> fileData;
+//           }
 
-    return fileData;
-}
+//           return fileData;
+//       }

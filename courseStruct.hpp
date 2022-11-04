@@ -2,8 +2,8 @@
 #define courseStruct_hpp
 
 struct Ht_item {
-    int courseNumber;
-    std::string courseName;
+    int courseNumber = 0;
+    std::string courseName = "name";
 };
 
 #endif
