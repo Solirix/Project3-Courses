@@ -14,6 +14,6 @@ class hashTable {
         hashTable(int);
         hashTable();
         int hash(int);
-        void insert(Ht_item);
+        void insert(int);
         void printTable();
 };

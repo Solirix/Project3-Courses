@@ -24,9 +24,9 @@ int hashTable::hash(int key) {
 }
 
 // insert a value into the hash table
-void hashTable::insert(Ht_item key) {
-    int hashIndex = hash(key.courseNumber);
-    table[hashIndex] = std::to_string(key.courseNumber);
+void hashTable::insert(int key) {
+    int hashIndex = hash(key);
+    table[hashIndex] = std::to_string(key);
 }
 
 // print out the hash table
