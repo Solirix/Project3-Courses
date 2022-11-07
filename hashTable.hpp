@@ -16,4 +16,5 @@ class hashTable {
         int hash(int);
         void insert(int);
         void printTable();
+        int reHash(int);
 };

@@ -25,8 +25,14 @@ int hashTable::hash(int key) {
 
 // insert a value into the hash table
 void hashTable::insert(int key) {
-    int hashIndex = hash(key);
-    table[hashIndex] = std::to_string(key);
+    if (table[hash(key)] == "") {
+        table[hash(key)] = std::to_string(key);
+    }
+    else {
+        std::cout << "Collision detected at index " << hash(key) << std::endl;
+        std::cout << "Rehashing..." << std::endl;
+        table[reHash(hash(key))] = std::to_string(key);
+    }
 }
 
 // print out the hash table
@@ -35,3 +41,10 @@ void hashTable::printTable() {
         std::cout << i << ": " << table[i] << std::endl;
     }
 }
+
+int hashTable::reHash(int ogIndex) {
+    int i = 1;
+    int newIndex = ogIndex + (i^2);
+    return newIndex;
+}
+
