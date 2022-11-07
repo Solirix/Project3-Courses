@@ -8,29 +8,43 @@ int reCalcArrayIndex(int);
 
 int main(void) {
     struct Ht_item courseInput;
-    
-    courseInput.courseNumber = 123;
-    courseInput.courseName = "Discrete Structures";
-    
-    
+    std::ifstream courseFile;
+
     hashTable myTable = hashTable(SIZE);
     std::string nameArray[SIZE];
 
 
-    myTable.insert(courseInput.courseNumber);
-    nameArray[calculateArrayIndex(courseInput.courseNumber)] = courseInput.courseName;
+    courseFile.open("data.txt");
 
-
-    courseInput.courseNumber = 123;
-    courseInput.courseName = "Discrete Structures";
-
-    myTable.insert(courseInput.courseNumber);
-    if (nameArray[calculateArrayIndex(courseInput.courseNumber)] == "") {
-        nameArray[calculateArrayIndex(courseInput.courseNumber)] = courseInput.courseName;
+    if (!courseFile) {
+        std::cout << "Error opening file" << std::endl;
+        return 1;
     }
     else {
-        nameArray[reCalcArrayIndex(calculateArrayIndex(courseInput.courseNumber))] = courseInput.courseName;
+        while (courseFile.eof() == false) {
+
+            courseFile >> courseInput.courseNumber;
+            getline(courseFile, courseInput.courseName);
+            myTable.insert(courseInput.courseNumber);
+
+            if (nameArray[calculateArrayIndex(courseInput.courseNumber)] == "") {
+                nameArray[calculateArrayIndex(courseInput.courseNumber)] = courseInput.courseName;
+            }
+            else {
+                nameArray[reCalcArrayIndex(calculateArrayIndex(courseInput.courseNumber))] = courseInput.courseName;
+            }
+        }
+        
     }
+    
+    courseFile.close();
+    
+
+
+
+
+    
+
 
 
 
