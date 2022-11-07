@@ -31,7 +31,18 @@ void hashTable::insert(int key) {
     else {
         std::cout << "Collision detected at index " << hash(key) << std::endl;
         std::cout << "Rehashing..." << std::endl;
-        table[reHash(hash(key))] = std::to_string(key);
+
+        for (int i = 0; i > -1; i++) {
+            if (table[reHash(hash(key))] == "") {
+
+            table[reHash(hash(key))] = std::to_string(key);
+            break;
+            }
+            else {
+                key++;
+            }
+
+        }
     }
 }
 
