@@ -1,91 +1,30 @@
-    CS 102 - Fundamentals of IT and Computing
-    CS 110 - C++ Programming I
-    CS 111 - C++ Programming II
-    CS 170 - Discrete Structures
-    CS 171 - Introduction to Computability
-    CS 221 - Data Structures
-    CS 225 - Cybersecurity
-    CS 292 - Engineering and Computer Ethics
-    CS 310 - Programming Languages
-    CS 312 - Introduction to Algorithms
-    CS 321 - Data Communications and Computer Networks
-    CS 330 - Operating Systems
-    CS 335 - Computer Organization
-    CS 350 - Database Concepts and Information Structures
-    CS 355 - Software Engineering
-    CS 357 - Computing Science Project I
-    CS 358 - Computing Science Project II
-    CS 214 - Introduction to Mobile Application Development
-    CS 226 - Mobile Forensics
-    CS 250 - User Interface Design
-    CS 255 - Introduction to Artificial Intelligence
-    CS 270 - Introduction to Numerical Computation
-    CS 305 - Web Technologies
-    CS 315 - Server-Side Programming
-    CS 322 - Advanced Networking
-    CS 325 - Advanced Topics in Cybersecurity
-    CS 365 - Computer Game Design and Development
-    CS 366 - Advanced Computer Game Design and Development
-    CS 367 - Multiplayer Networked Games
-    CS 375 - Applied Cryptography
-    CS 102 - Fundamentals of IT and Computing
-    CS 110 - C++ Programming I
-    CS 111 - C++ Programming II
-    CS 170 - Discrete Structures
-    CS 221 - Data Structures
-    CS 225 - Cybersecurity
-    CS 265 - Information Systems Management
-    CS 292 - Engineering and Computer Ethics
-    CS 321 - Data Communications and Computer Networks
-    CS 322 - Advanced Networking
-    CS 350 - Database Concepts and Information Structures
-    CS 351 - Information Systems Analysis and Design
-    OR
-    CS 355 - Software Engineering
-    CS 357 - Computing Science Project I
-    CS 358 - Computing Science Project II
-
-    CIS ELECTIVES 9 credits chosen from the following:
-    CS 205 - Website Design and Programming
-    CS 214 - Introduction to Mobile Application Development
-    CS 226 - Mobile Forensics
-    CS 250 - User Interface Design
-    CS 255 - Introduction to Artificial Intelligence
-    CS 270 - Introduction to Numerical Computation
-    CS 305 - Web Technologies
-    CS 315 - Server-Side Programming
-    CS 325 - Advanced Topics in Cybersecurity
-    CS 330 - Operating Systems
-    CS 335 - Computer Organization
-    CS 365 - Computer Game Design and Development
-    CS 366 - Advanced Computer Game Design and Development
-    CS 367 - Multiplayer Networked Games
-    CS 375 - Applied Cryptography
-
-    MATH COURSES:
-
-    MA 111 - Analytical Calculus I
-    OR
-    MA 109 - Calculus with Applications I
-
-    MA 241 - Statistics I
-    OR
-    MA 311 - Probability and Statistics I
-
-    REQUIRED SOCIAL SCIENCE: 6 credits in business and/or economics
-
-    SCIENCE REQUIREMENTS: 8 credits (science with lab) chosen from chemistry, physics, biology, or natural science (NSCI)
-
-Cybersecurity Major
-
-    CIS CORE REQUIREMENTS:
-    CS 102 - Fundamentals of IT and Computing
-    CS 110 - C++ Programming I
-    CS 111 - C++ Programming II
-    CS 170 - Discrete Structures
-    CS 221 - Data Structures
-    CS 225 - Cybersecurity
-    CS 265 - Information Systems Management
-    CS 292 - Engineering and Computer Ethics
-    CS 310 - Programming Languages
-    CS 321 - Data Communications 
+102 Fundamentals of IT and Computing
+110 C++ Programming I
+111 C++ Programming II
+170 Discrete Structures
+221 Data Structures
+225 Cybersecurity
+265 Information Systems Management
+292 Engineering and Computer Ethics
+321 Data Communications and Computer Networks
+322 Advanced Networking
+350 Database Concepts and Information Structures
+351 Information Systems Analysis and Design
+355 Software Engineering
+357 Computing Science Project I
+358 Computing Science Project II
+205 Website Design and Programming
+214 Introduction to Mobile Application Development
+226 Mobile Forensics
+250 User Interface Design
+255 Introduction to Artificial Intelligence
+270 Introduction to Numerical Computation
+305 Web Technologies
+315 Server-Side Programming
+325 Advanced Topics in Cybersecurity
+330 Operating Systems
+335 Computer Organization
+365 Computer Game Design and Development
+366 Advanced Computer Game Design and Development
+367 Multiplayer Networked Games
+375 Applied Cryptography 
