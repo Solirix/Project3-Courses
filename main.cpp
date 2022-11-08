@@ -6,6 +6,8 @@
 int calculateArrayIndex(int);
 int reCalcArrayIndex(int); 
 
+int gI = 1;
+
 int main(void) {
     struct Ht_item courseInput;
     std::ifstream courseFile;
@@ -70,8 +72,8 @@ int calculateArrayIndex(int num) {
 }
 
 int reCalcArrayIndex(int ogIndex) {
-    int i = 1;
-    int newIndex = ogIndex + (i^2);
+    int newIndex = ogIndex + (gI^2);
+    ++gI;
     return newIndex;
 }
 
