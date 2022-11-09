@@ -8,14 +8,21 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/home/aiden/Projects/Project3-Courses",
-      "program": "/home/aiden/Projects/Project3-Courses/build/Debug/outDebug",
+      "cwd": "${workspaceFolder}",
+      "program": "${fileDirname}/${fileBasenameNoExtension}",
       "MIMode": "gdb",
-      "miDebuggerPath": "gdb",
+      "miDebuggerPath": "/bin/gdb",
+      "launchCompleteCommand": "exec-run",
+      "additionalSOLibSearchPath": "/home/aiden/root/root/lib", 
       "setupCommands": [
         {
           "description": "Enable pretty-printing for gdb",
           "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        },
+        {
+          "description": "Set the path to the root libraries",
+          "text": "set solib-search-path sharedLibraryPath/lib",
           "ignoreFailures": true
         }
       ]
