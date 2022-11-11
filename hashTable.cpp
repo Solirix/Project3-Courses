@@ -50,6 +50,10 @@ int hashTable::quadraticProbe(int ogIndex) {
     while (table[newIndex] != "") {
         newIndex = (ogIndex + (i * i)) % tableSize;
         i++;
+        if (table[newIndex] == "") {
+            table[newIndex] = std::to_string(ogIndex);
+            break;
+        }
     }
     return newIndex;
 }

@@ -14,7 +14,7 @@ int main(void) {
 
     hashTable myTable = hashTable(SIZE);
     std::string nameArray[SIZE];
-
+    int temp = 0;
 
     courseFile.open("data.txt");
 
@@ -33,7 +33,17 @@ int main(void) {
                 nameArray[calculateArrayIndex(courseInput.courseNumber)] = courseInput.courseName;
             }
             else {
-                nameArray[quadraticProbeArray(calculateArrayIndex(courseInput.courseNumber))] = courseInput.courseName;
+                while (nameArray[calculateArrayIndex(courseInput.courseNumber)] != "") {
+                    
+                    temp = quadraticProbeArray(calculateArrayIndex(courseInput.courseNumber)); 
+                    if (nameArray[temp] == "") {
+                        nameArray[temp] = courseInput.courseName;
+                        break;
+                    }
+                    
+                 }
+                 gI = 1;
+                 temp = 0;
             }
         }
         
@@ -73,11 +83,10 @@ int calculateArrayIndex(int num) {
 
 int quadraticProbeArray(int ogIndex) {
     int newIndex = ogIndex;
-    int i = 1;
-
-    newIndex = (ogIndex + (i * i)) % SIZE;
-    i++;
-
+    
+    newIndex = (ogIndex + (gI * gI)) % SIZE;
+    gI++;
+    
     return newIndex;
 }
 
