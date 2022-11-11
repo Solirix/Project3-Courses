@@ -32,18 +32,9 @@ void hashTable::insert(int key) {
         std::cout << "Collision detected at index " << hash(key) << std::endl;
         std::cout << "Rehashing..." << std::endl;
 
-        for (int i = 0; i > -1; i++) {
-            if (table[reHash(hash(key))] == "") {
+        quadraticProbe(hash(key));
 
-            table[reHash(hash(key))] = std::to_string(key);
-            break;
-            }
-            else {
-                key++;
-            }
-
-        }
-    }
+        } 
 }
 
 // print out the hash table
@@ -53,9 +44,13 @@ void hashTable::printTable() {
     }
 }
 
-int hashTable::reHash(int ogIndex) {
+int hashTable::quadraticProbe(int ogIndex) {
+    int newIndex = ogIndex;
     int i = 1;
-    int newIndex = ogIndex + (i^2);
+    while (table[newIndex] != "") {
+        newIndex = (ogIndex + (i * i)) % tableSize;
+        i++;
+    }
     return newIndex;
 }
 

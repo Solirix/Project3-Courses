@@ -4,7 +4,7 @@
 #define SIZE 55
 //       std::string readData(std::string);
 int calculateArrayIndex(int);
-int reCalcArrayIndex(int); 
+int quadraticProbeArray(int); 
 
 int gI = 1;
 
@@ -33,7 +33,7 @@ int main(void) {
                 nameArray[calculateArrayIndex(courseInput.courseNumber)] = courseInput.courseName;
             }
             else {
-                nameArray[reCalcArrayIndex(calculateArrayIndex(courseInput.courseNumber))] = courseInput.courseName;
+                nameArray[quadraticProbeArray(calculateArrayIndex(courseInput.courseNumber))] = courseInput.courseName;
             }
         }
         
@@ -71,9 +71,13 @@ int calculateArrayIndex(int num) {
     return hashIndex;
 }
 
-int reCalcArrayIndex(int ogIndex) {
-    int newIndex = ogIndex + (gI^2);
-    ++gI;
+int quadraticProbeArray(int ogIndex) {
+    int newIndex = ogIndex;
+    int i = 1;
+
+    newIndex = (ogIndex + (i * i)) % SIZE;
+    i++;
+
     return newIndex;
 }
 
