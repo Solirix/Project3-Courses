@@ -1,7 +1,39 @@
 {
+<<<<<<< HEAD
     // Use IntelliSense to learn about possible attributes.
     // Hover to view descriptions of existing attributes.
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": []
+=======
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "externalConsole": false,
+      "cwd": "${workspaceFolder}",
+      "program": "${fileDirname}/${fileBasenameNoExtension}",
+      "MIMode": "gdb",
+      "miDebuggerPath": "/bin/gdb",
+      "launchCompleteCommand": "exec-run",
+      "additionalSOLibSearchPath": "/home/aiden/root/root/lib", 
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        },
+        {
+          "description": "Set the path to the root libraries",
+          "text": "set solib-search-path sharedLibraryPath/lib",
+          "ignoreFailures": true
+        }
+      ]
+    }
+  ]
+>>>>>>> 93f89663b5975318914ea7abe41e246e8648c85c
 }
