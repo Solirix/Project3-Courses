@@ -32,7 +32,7 @@ void hashTable::insert(int key) {
         std::cout << "Collision detected at index " << hash(key) << std::endl;
         std::cout << "Rehashing..." << std::endl;
 
-        quadraticProbe(hash(key));
+        quadraticProbe(hash(key), key);
 
         } 
 }
@@ -44,14 +44,14 @@ void hashTable::printTable() {
     }
 }
 
-int hashTable::quadraticProbe(int ogIndex) {
+int hashTable::quadraticProbe(int ogIndex, int item) {
     int newIndex = ogIndex;
     int i = 1;
     while (table[newIndex] != "") {
         newIndex = (ogIndex + (i * i)) % tableSize;
         i++;
         if (table[newIndex] == "") {
-            table[newIndex] = std::to_string(ogIndex);
+            table[newIndex] = std::to_string(item);
             break;
         }
     }
