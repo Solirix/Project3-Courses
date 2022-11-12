@@ -2,7 +2,6 @@
 
 
 #define SIZE 55
-//       std::string readData(std::string);
 int calculateArrayIndex(int);
 int quadraticProbeArray(int); 
 
@@ -89,16 +88,3 @@ int quadraticProbeArray(int ogIndex) {
     
     return newIndex;
 }
-
-//       std::string readData(std::string fileInput) {
-//           std::ifstream myFile;
-//           std::string fileData;
-
-//           myFile.open(fileInput);
-
-//           while (myFile.eof() == false) {
-//               myFile >> fileData;
-//           }
-
-//           return fileData;
-//       }
