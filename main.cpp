@@ -1,11 +1,12 @@
 #include "hashTable.hpp"
 
 
-#define SIZE 55
+#define SIZE 59
 int calculateArrayIndex(int);
 int quadraticProbeArray(int); 
 
 int gI = 1;
+
 
 int main(void) {
     struct Ht_item courseInput;
@@ -34,6 +35,7 @@ int main(void) {
             else {
                 while (nameArray[calculateArrayIndex(courseInput.courseNumber)] != "") {
                     
+                   
                     temp = quadraticProbeArray(calculateArrayIndex(courseInput.courseNumber)); 
                     if (nameArray[temp] == "") {
                         nameArray[temp] = courseInput.courseName;
@@ -67,6 +69,8 @@ int main(void) {
     for (int i = 0; i < SIZE; i++) {
         std::cout << i << ": " << nameArray[i] << std::endl;
     }
+
+    
 
     return 0;
 }

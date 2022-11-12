@@ -15,12 +15,15 @@ hashTable::hashTable(int size) {
 
 // hash function for mid-square hashing
 int hashTable::hash(int key) {
-    int hashKey = key * key;
-    int hashKeyLength = std::to_string(hashKey).length();
-    int mid = hashKeyLength / 2;
-    int midDigit = std::to_string(hashKey)[mid] - '0';
-    int hashIndex = midDigit % tableSize;
-    return hashIndex;
+    // int hashKey = key * key;
+    // int hashKeyLength = std::to_string(hashKey).length();
+    // int mid = hashKeyLength / 2;
+    // int midDigit = std::to_string(hashKey)[mid] - '0';
+    // int hashIndex = midDigit % tableSize;
+    // return hashIndex;
+
+    int hashKey = key % tableSize;
+    return hashKey;
 }
 
 // insert a value into the hash table
@@ -48,6 +51,7 @@ int hashTable::quadraticProbe(int ogIndex, int item) {
     int newIndex = ogIndex;
     int i = 1;
     while (table[newIndex] != "") {
+        collisions++;
         newIndex = (ogIndex + (i * i)) % tableSize;
         i++;
         if (table[newIndex] == "") {

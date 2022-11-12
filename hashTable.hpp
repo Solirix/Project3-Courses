@@ -8,6 +8,7 @@
 class hashTable {
     private:
         int tableSize;
+        int collisions = 0;
         std::vector<std::string> table;
 
     public:
