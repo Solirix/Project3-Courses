@@ -13,7 +13,13 @@ hashTable::hashTable(int size) {
     table = std::vector<std::string>(size);
 }
 
-// hash function for mid-square hashing
+// hash function for regular hashing
+
+/* 
+Originally, I used mid-square hashing. after some experimentation however, I've decided to use regular hashing, 
+as it has proven to consistently provide less collisions with this data set. I've left the mid-square hashing
+code commented out below, in case you'd like to see it.
+*/
 int hashTable::hash(int key) {
     // int hashKey = key * key;
     // int hashKeyLength = std::to_string(hashKey).length();
@@ -22,8 +28,8 @@ int hashTable::hash(int key) {
     // int hashIndex = midDigit % tableSize;
     // return hashIndex;
 
-    int hashKey = key % tableSize;
-    return hashKey;
+    int hashIndex = key % tableSize;
+    return hashIndex;
 }
 
 // insert a value into the hash table
@@ -32,15 +38,19 @@ void hashTable::insert(int key) {
         table[hash(key)] = std::to_string(key);
     }
     else {
-        std::cout << "Collision detected at index " << hash(key) << std::endl;
-        std::cout << "Rehashing..." << std::endl;
-    collisions++;
-        quadraticInsert(hash(key), key);
+        /*
+        The code I used for debugging collisions remains in the commented out sections below.
+        */
 
+        // std::cout << "Collision detected at index " << hash(key) << std::endl;
+        // std::cout << "Rehashing..." << std::endl;
+        collisions++;
+        quadraticInsert(hash(key), key);
         } 
 }
 
 // print out the hash table
+// used during debugging, and decided to implement it as an option for the user.
 void hashTable::printTable() {
     for (int i = 0; i < tableSize; i++) {
         std::cout << i << ": " << table[i] << std::endl;

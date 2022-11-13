@@ -4,6 +4,7 @@
 #define SIZE 59
 int calculateArrayIndex(int);
 int quadraticProbeArray(int);
+void printNameArray(std::string nameArray[]);
 
 int gI = 1;
 
@@ -57,14 +58,24 @@ int main(void) {
 
     //prompt the user to search for courses
     while (userSearch != -1) {
-        std::cout << "Enter a course number to search for (-1 to quit): ";
+        std::cout << "Enter a course number to search for (-1 to quit, or 0 to print the entire table): ";
         std::cin >> userSearch;
         if (userSearch == -1) {
             break;
         }
+        else if (userSearch == 0) {
+            myTable.printTable();
+            std::cout << std::endl;
+            printNameArray(nameArray);
+        }
         else {
-            std::cout << "Course number: " << userSearch << std::endl;
-            std::cout << "Course name: " << nameArray[myTable.searchHashTable(userSearch)] << std::endl;
+            if (nameArray[myTable.searchHashTable(userSearch)] != "") {
+                std::cout << "Course number: " << userSearch << std::endl;
+                std::cout << "Course name: " << nameArray[myTable.searchHashTable(userSearch)] << std::endl;
+            }
+            else {
+                std::cout << "Course not found." << std::endl;
+            } 
         }
     }
 
@@ -91,4 +102,10 @@ int quadraticProbeArray(int ogIndex) {
     gI++;
     
     return newIndex;
+}
+
+void printNameArray(std::string nameArray[]) {
+    for (int i = 0; i < SIZE; i++) {
+        std::cout << i << ": " << nameArray[i] << std::endl;
+    }
 }
