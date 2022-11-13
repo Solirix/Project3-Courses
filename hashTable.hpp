@@ -17,5 +17,7 @@ class hashTable {
         int hash(int);
         void insert(int);
         void printTable();
+        int quadraticInsert(int, int);
         int quadraticProbe(int, int);
+        int searchHashTable(int);
 };

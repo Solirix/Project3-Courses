@@ -3,7 +3,7 @@
 
 #define SIZE 59
 int calculateArrayIndex(int);
-int quadraticProbeArray(int); 
+int quadraticProbeArray(int);
 
 int gI = 1;
 
@@ -11,6 +11,7 @@ int gI = 1;
 int main(void) {
     struct Ht_item courseInput;
     std::ifstream courseFile;
+    int userSearch = 0;
 
     hashTable myTable = hashTable(SIZE);
     std::string nameArray[SIZE];
@@ -54,20 +55,17 @@ int main(void) {
     
 
 
-
-
-    
-
-
-
-
-
-
-    myTable.printTable();
-    std::cout << std::endl << std::endl;
-    
-    for (int i = 0; i < SIZE; i++) {
-        std::cout << i << ": " << nameArray[i] << std::endl;
+    //prompt the user to search for courses
+    while (userSearch != -1) {
+        std::cout << "Enter a course number to search for (-1 to quit): ";
+        std::cin >> userSearch;
+        if (userSearch == -1) {
+            break;
+        }
+        else {
+            std::cout << "Course number: " << userSearch << std::endl;
+            std::cout << "Course name: " << nameArray[myTable.searchHashTable(userSearch)] << std::endl;
+        }
     }
 
     
