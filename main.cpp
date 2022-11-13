@@ -84,13 +84,7 @@ int main(void) {
     return 0;
 }
 
-int calculateArrayIndex(int num) {
-    // int hashKey = num * num;
-    // int hashKeyLength = std::to_string(hashKey).length();
-    // int mid = hashKeyLength / 2;
-    // int midDigit = std::to_string(hashKey)[mid] - '0';
-    // int hashIndex = midDigit % SIZE;
-    // return hashIndex;
+int calculateArrayIndex(int num) { 
     int hashKey = num % SIZE;
     return hashKey;
 }
