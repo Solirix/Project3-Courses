@@ -1,7 +1,7 @@
 #include "hashTable.hpp"
 
 
-#define SIZE 59
+#define SIZE 69
 int calculateArrayIndex(int);
 int quadraticProbeArray(int);
 void printNameArray(std::string nameArray[]);
