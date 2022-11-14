@@ -68,14 +68,12 @@ int main(void) {
             std::cout << std::endl;
             printNameArray(nameArray);
         }
+        else if (myTable.searchHashTable(userSearch) == -1) {
+            std::cout << "Course not found." << std::endl;
+        }
         else {
-            if (nameArray[myTable.searchHashTable(userSearch)] != "") {
-                std::cout << "Course number: " << userSearch << std::endl;
-                std::cout << "Course name: " << nameArray[myTable.searchHashTable(userSearch)] << std::endl;
-            }
-            else {
-                std::cout << "Course not found." << std::endl;
-            } 
+            std::cout << "Course found at index " << myTable.searchHashTable(userSearch) << std::endl;
+            std::cout << "Course name: " << nameArray[myTable.searchHashTable(userSearch)] << std::endl;
         }
     }
 

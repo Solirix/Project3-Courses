@@ -44,7 +44,6 @@ void hashTable::insert(int key) {
 
         // std::cout << "Collision detected at index " << hash(key) << std::endl;
         // std::cout << "Rehashing..." << std::endl;
-        collisions++;
         quadraticInsert(hash(key), key);
         } 
 }
@@ -57,14 +56,14 @@ void hashTable::printTable() {
     }
 }
 
+// quadratic probing function for inserting values into the hash table
 int hashTable::quadraticInsert(int ogIndex, int item) {
     int newIndex = ogIndex;
     int i = 1;
     while (table[newIndex] != "") {
-        collisions++;
-        newIndex = (ogIndex + (i * i)) % tableSize;
+        newIndex = (ogIndex + (i * i)) % tableSize;  // quadratic probing formula
         i++;
-        if (table[newIndex] == "") {
+        if (table[newIndex] == "") {      //if the new index is empty, insert the item there
             table[newIndex] = std::to_string(item);
             break;
         }
@@ -72,20 +71,26 @@ int hashTable::quadraticInsert(int ogIndex, int item) {
     return newIndex;
 }
 
+// actual probing function for searching the hash table
 int hashTable::quadraticProbe(int index, int key) {
     int newIndex = index;
     int i = 1;
+    int j = 0;
     while (table[newIndex] != std::to_string(key)) {
-        newIndex = (index + (i * i)) % tableSize;
+        newIndex = (index + (i * i)) % tableSize;  // quadratic probing formula
         i++;
-        if (table[newIndex] == std::to_string(key)) {
-            
+        j++;
+        if (table[newIndex] == std::to_string(key)) {  // if the new index is the key, break to return the index
+            return newIndex;
+        }
+        else if (j > tableSize) {  // if the key is not found, return -1
             break;
         }
-    }
-    return newIndex;
+    } 
+    return -1;
 }
 
+// search the hash table for a value
 int hashTable::searchHashTable(int key) {
     int index = hash(key);
     if (table[index] == std::to_string(key)) {
