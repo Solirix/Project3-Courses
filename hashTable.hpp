@@ -6,6 +6,7 @@
 #include <fstream>
 #include "courseStruct.hpp"
 
+//class declaration of the table
 class hashTable {
     private:
         int tableSize; 
