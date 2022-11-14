@@ -59,7 +59,7 @@ void hashTable::printTable() {
 // quadratic probing function for inserting values into the hash table
 int hashTable::quadraticInsert(int ogIndex, int item) {
     int newIndex = ogIndex;
-    int i = 1;
+    int i = 1;   //variable to increment the probing
     while (table[newIndex] != "") {
         newIndex = (ogIndex + (i * i)) % tableSize;  // quadratic probing formula
         i++;
@@ -74,8 +74,8 @@ int hashTable::quadraticInsert(int ogIndex, int item) {
 // actual probing function for searching the hash table
 int hashTable::quadraticProbe(int index, int key) {
     int newIndex = index;
-    int i = 1;
-    int j = 0;
+    int i = 1;   //variable to increment the probing
+    int j = 0;   //variable to keep track of the number of probes
     while (table[newIndex] != std::to_string(key)) {
         newIndex = (index + (i * i)) % tableSize;  // quadratic probing formula
         i++;
